@@ -7,8 +7,9 @@ navigator.geolocation.getCurrentPosition(function (position) {
 }, function (position) {
     console.log(position)
 });
+
 //get destination's location
-function getCurrentTabUrl() {
+function getCurrentTabUrl(callback) {
     // Query filter to be passed to chrome.tabs.query - see
     // https://developer.chrome.com/extensions/tabs#method-query
     var queryInfo = {
@@ -23,14 +24,30 @@ function getCurrentTabUrl() {
         console.assert(typeof url == 'string', 'tab.url should be a string');
 
         //IF IT BREAKS- check if url pathname is correct
-        var locationArray = url.pathname.substring((url.location.pathname.indexOf('@') + 1)).split(',');
+        var locationArray = url.substring((url.indexOf('@') + 1)).split(',');
         var end_latitude = locationArray[0];
         var end_longitude = locationArray[1];
 
-        getEstimate(location);
+        callback({
+            latitude: end_latitude,
+            longitude: end_longitude
+        });
 
     });
 }
+
+function getLocations() {
+    getCurrentTabUrl(function (end_location) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var start_latitude = position.coords.latitude;
+            var start_longtitude = position.coords.longitude;
+            getEstimate(start_latitude, start_longtitude, end_location.latitude, end_location.longitude, renderStatus)
+        }, function (position) {
+            console.log(position)
+        });
+    });
+}
+
 
 /*
 function getCurrentLocation() {
@@ -43,11 +60,8 @@ function getCurrentLocation() {
 }
 */
 
-
-
-alert("YO");
 //Sushi's code that accesses the Uber API
-var token = "VaLcUWaDBup72RhBNe5aMRBgyP1z6bJNBAzvdncC";
+var token = "bZttHxBNzJRQN2_HIvAXCJbKjaVWwPapVrElS7e7";
 
 
 function getEstimate(start_latitude, start_longitude, end_latitude, end_longitude, renderResult) {
@@ -74,8 +88,9 @@ function getEstimate(start_latitude, start_longitude, end_latitude, end_longitud
 }
 
 function getResult(data) {
-    var price = data["prices"]["estimate"];
-    console.log(price);
+    return {
+        estimate: data["prices"][0]["estimate"]
+    }
 }
 
 
@@ -93,8 +108,12 @@ function getResult(data) {
 
 
 
-function renderStatus(statusText) {
-    document.getElementById('status').textContent = computePrice(location);
+function renderStatus(info) {
+    alert(info.estimate);
 }
 
-
+$(function () {
+    $("#trigger").click(function () {
+        getLocations();
+    });
+});
