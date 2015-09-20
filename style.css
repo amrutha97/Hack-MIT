@@ -1,0 +1,61 @@
+
+body {
+    height: 400px;
+    width: 300px;
+    text-align: center;
+    font-family: open-sans;
+    color: black;
+}
+
+p {
+    color: black; 
+    font-family: open-sans; 
+    font-size: 20px;
+}
+
+#test {
+    
+}
+
+<p {
+    font-family: open-sans;
+    color: black;
+}
+
+<label {
+    font-family: open-sans;
+    color: black;
+
+}
+<div {
+    font-family: open-sans;
+    color: black;
+
+}
+
+#container {
+    border-style: solid;
+    background-color: white;
+    color: black;
+    font-family: open-sans;
+    
+}
+
+html {
+    background-color: white
+}
+
+.text--center {
+    "color: black;
+              font-family: open sans; font-size: 15px"
+}
+
+
+
+div {
+    
+}
+
+#wierd {
+    margin-right: 28px
+}

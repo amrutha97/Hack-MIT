@@ -1,17 +1,27 @@
 {
-  "manifest_version": 2,
+    "manifest_version": 2,
 
-  "name": "UMap",
-  "description": "How much will your Uber cost?",
-  "version": "1.0",
+    "name": "UMap",
+    "description": "How much will your Uber cost?",
+    "version": "1.0",
 
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
-  },
-  "permissions": [
-    "tabs",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "UMap",
+        "default_popup": "umap.html"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "icons": {
+        "64": "icon.png",
+        "32": "icon.png",
+        "16": "icon.png",
+        "128": "icon.png"
+    },
+    "permissions": [
     "activeTab",
-    "https://ajax.googleapis.com/"
+    "https://ajax.googleapis.com/",
+    "geolocation"
   ]
 }
