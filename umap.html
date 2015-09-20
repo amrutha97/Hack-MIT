@@ -11,20 +11,24 @@
 
 <body>
     <div id="container">
-    <p style="color: black;
+        <p style="color: black;
               font-family: open sans;
               font-size: 25px
 
               "><strong>Welcome to uMAP</strong>
-    </p>
-<img src="banner.png" id="trigger">
-    <p style="color: black;
+        </p>
+        <img src="banner.png" id="trigger">
+        <p style="color: black;
               font-family: open sans;
               font-size: 15px
 
               ">Uber is your ride, on demand. Now it's even easier to see real-time transportation cost and time to your destination with uMAP + Google Maps.
-    </p>
+        </p>
+    <div class="price-box">
+        <p>Your Uber price is:</p>
+        <p id="price-box"></p>
 
+    </div>
 
         <p style="color: black;
               font-family: open sans;
@@ -32,52 +36,52 @@
 
               ">Sign In
         </p>
-        <a href="dummy.html"><img src="fb.png" ></a>
+        <a href="dummy.html"><img src="fb.png"></a>
 
 
-    <form method="post" class="form" novalidate>
-        <input type="hidden" name="_csrf_token" value="1442732295-01-w7MZoBbePR4pdDdMjTS4IyBvjxdVrR_GmulxaS291p0=">
-        <input type="hidden" data-js="access-token" name="access_token" />
+        <form method="post" class="form" novalidate>
+            <input type="hidden" name="_csrf_token" value="1442732295-01-w7MZoBbePR4pdDdMjTS4IyBvjxdVrR_GmulxaS291p0=">
+            <input type="hidden" data-js="access-token" name="access_token" />
 
 
-        <p class="background-line push-large--top">
-            <span style="color: black;
+            <p class="background-line push-large--top">
+                <span style="color: black;
               font-family: open sans"> or use email</span>
-        </p>
+            </p>
 
-        <div class="form-group push--bottom">
-            <label class="label" for="email" style="color: black;
+            <div class="form-group push--bottom">
+                <label class="label" for="email" style="color: black;
               font-family: open sans; font-size: 15px">Email</label>
-            <input type="email" class="text-input " name="email" placeholder="Email Address" value="" id="email" style=width: 290px; height: 80px;/>
-        </div>
-        <div class="form-group push--bottom" id="wierd">
-            <label class="label" for="password" style="color: black;
+                <input type="email" class="text-input " name="email" placeholder="Email Address" value="" id="email" style=width: 290px; height: 80px;/>
+            </div>
+            <div class="form-group push--bottom" id="wierd">
+                <label class="label" for="password" style="color: black;
               font-family: open sans; font-size: 15px">Password</label>
-            <input type="password" class="text-input " name="password" placeholder="Password" id="password" />
-        </div>
-        <div class="form-group push--bottom">
-            <input type="checkbox" id="checkbox-rememberme" class="hidden" checked />
-            <label class="checkbox" for="checkbox-rememberme" style="color: black;
+                <input type="password" class="text-input " name="password" placeholder="Password" id="password" />
+            </div>
+            <div class="form-group push--bottom">
+                <input type="checkbox" id="checkbox-rememberme" class="hidden" checked />
+                <label class="checkbox" for="checkbox-rememberme" style="color: black;
               font-family: open sans; font-size: 15px">
-                Remember Me
-            </label>
-        </div>
-        <img src="signin.png">
-    </form>
-    <div class="text--center push--top" style="color: black;
+                    Remember Me
+                </label>
+            </div>
+            <img src="signin.png">
+        </form>
+        <div class="text--center push--top" style="color: black;
               font-family: open sans; font-size: 15px">
-        <a class="btn btn--link" href="https://login.uber.com/forgot-password">
+            <a class="btn btn--link" href="https://login.uber.com/forgot-password">
       Forgot Password
     </a>
-    </div>
-    <hr class="push--top" />
-    <p class="text--center" style="color: black;
+        </div>
+        <hr class="push--top" />
+        <p class="text--center" style="color: black;
               font-family: open sans; font-size: 15px">
-        Don&#39;t have an account?
-        <a class="btn btn--link" href="https://get.uber.com/go/?client_id=p-_T5elRZt1sENR4uHWDlmi0qCnGwOM7">
+            Don&#39;t have an account?
+            <a class="btn btn--link" href="https://get.uber.com/go/?client_id=p-_T5elRZt1sENR4uHWDlmi0qCnGwOM7">
       Sign Up
     </a>
-    </p>
+        </p>
     </div>
 </body>
 

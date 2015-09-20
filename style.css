@@ -8,13 +8,13 @@ body {
 }
 
 p {
-    color: black; 
-    font-family: open-sans; 
+    color: black;
+    font-family: open-sans;
     font-size: 20px;
 }
 
 #test {
-    
+
 }
 
 <p {
@@ -38,7 +38,7 @@ p {
     background-color: white;
     color: black;
     font-family: open-sans;
-    
+
 }
 
 html {
@@ -53,9 +53,15 @@ html {
 
 
 div {
-    
+
 }
 
 #wierd {
     margin-right: 28px
+}
+
+.price-box {
+    width: 200px;
+    height: 100px;
+    margin:auto;
 }
