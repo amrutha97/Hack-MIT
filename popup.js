@@ -1,6 +1,14 @@
 //Creates JSON lcoation object
+function getCurrentTabUrl(callback) {
+  // Query filter to be passed to chrome.tabs.query - see
+  // https://developer.chrome.com/extensions/tabs#method-query
+  var queryInfo = {
+    active: true,
+    currentWindow: true
+  };
+}
 
-chrome.tabs.query(function(tabs) {
+chrome.tabs.query(queryInfo, function(tabs) {
     var tab = tabs[0];
     var url = tab.url;
     console.assert(typeof url == 'string', 'tab.url should be a string');
@@ -13,8 +21,10 @@ chrome.tabs.query(function(tabs) {
       var location = {
         latitude: locationLatitude,
         longitude: locationLongitude
-      }
+      };
+    callback(url);
       return location;
+
 });
 
 
@@ -27,8 +37,10 @@ function getCurrentLocation() {
 function computePrice(location) {
 
 }
-//Sushi's code that accesses the Uber API
-    var token = "kTKiSbrlx7zJohVcTBYYedeYliZAdwMlo6d4kV9r";
+
+    //Sushi's code that accesses the Uber API
+    var token = "VaLcUWaDBup72RhBNe5aMRBgyP1z6bJNBAzvdncC ";
+
 
 function getEstimate(start_latitude, start_longitude, end_latitude, end_longitude, renderResult) {
 $.ajax ({
@@ -48,10 +60,8 @@ $.ajax ({
         var result = getResult(data);
         renderResult(result);
     }
-})　
-
-
-
+})
+}
 
 function getResult(data) {
         var price = data["prices"]["estimate"];
@@ -71,7 +81,7 @@ function getResult(data) {
 //    alert(response);
 //}
 
-}
+
 
 function renderStatus(statusText) {
   document.getElementById('status').textContent = computePrice(location);
