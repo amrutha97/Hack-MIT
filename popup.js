@@ -25,7 +25,9 @@ function getCurrentLocation() {
 
 
 function computePrice(location) {
-    //Sushi's code that accesses the Uber API
+
+}
+//Sushi's code that accesses the Uber API
     var token = "kTKiSbrlx7zJohVcTBYYedeYliZAdwMlo6d4kV9r";
 
 function getEstimate(start_latitude, start_longitude, end_latitude, end_longitude, renderResult) {
@@ -46,8 +48,7 @@ $.ajax ({
         var result = getResult(data);
         renderResult(result);
     }
-})
-}
+})　
 
 
 
