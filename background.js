@@ -49,7 +49,7 @@ function getLocations() {
 }
 
 //Sushi's code that accesses the Uber API
-var token = "bZttHxBNzJRQN2_HIvAXCJbKjaVWwPapVrElS7e7";
+var token = "Gh3DPzMuB0-cBGkXzQAv3ZDAZ9K6kOWjzHsb1xFb";
 
 
 function getEstimate(start_latitude, start_longitude, end_latitude, end_longitude, renderResult) {

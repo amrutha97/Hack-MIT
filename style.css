@@ -46,8 +46,9 @@ html {
 }
 
 .text--center {
-    "color: black;
-              font-family: open sans; font-size: 15px"
+    color: black;
+    font-family: open sans;
+    font-size: 15px;
 }
 
 
@@ -64,4 +65,21 @@ div {
     width: 200px;
     height: 100px;
     margin:auto;
+}
+
+#welcome {
+    font-size: 30px;
+}
+
+#description {
+    font-size: 15px;
+}
+
+#Sign In {
+    font-size: 20px;
+}
+
+#email {
+    color: black;
+    font-family: open sans;
 }
